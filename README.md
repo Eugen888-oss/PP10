@@ -74,8 +74,14 @@ In this exercise you will:
 #### Reflection Questions
 
 1. **Why is the `-lm` flag necessary to resolve `sqrt`?**
+Without the -lm i can´t linking to the math.h -header and sqrt is a part of math.h.
+
 2. **What happens if you omit `-lm` when calling math functions?**
 
+I got the error:
+/usr/bin/ld: /tmp/cchiyKDX.o: in function `main':
+point_main.c:(.text+0x51): undefined reference to `sqrt'
+collect2: error: ld returned 1 exit status
 ---
 
 ### Task 2: Header-Only Library
